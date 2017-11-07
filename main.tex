@@ -1,9 +1,23 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[letterpaper,12pt]{article}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{}
+\lhead{Something}
+\cfoot{\thepage\ of \pageref{LastPage}}
+
 \begin{document}
-\title{Kevin Muncie's LaTeX Document Boilerplate}
-\author{Kevin Muncie}
-\date{\today}
-\maketitle
+\begin{titlepage}
+	\centering
+	{\scshape\LARGE Document Title \par}
+	\vspace{1cm}
+	{\large Todays Date\par}
+	\vspace{1.5cm}
+	{\Large\itshape Kevin Muncie\par}
+	\vfill
+
+\end{titlepage}
 
 Content will go here
 
