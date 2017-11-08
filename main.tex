@@ -1,24 +1,59 @@
-\documentclass[letterpaper,12pt]{article}
-\usepackage{lastpage}
+\documentclass[letterpaper, oneside]{article}
 \usepackage{fancyhdr}
-\pagestyle{fancy}
+\usepackage{lastpage}
+\usepackage[stable]{footmisc}
+\usepackage[us]{datetime}
+\newdate{meetingDate}{07}{11}{2017}
+\newcommand{\meetingTitle}{Our Sample Meeting Title}
+\setlength{\parindent}{0em}
 
+\pagestyle{fancy}
 \fancyhf{}
-\lhead{Something}
-\cfoot{\thepage\ of \pageref{LastPage}}
+\rhead{\displaydate{meetingDate}}
+\lhead{\meetingTitle}
+\rfoot{Page \thepage of \pageref{LastPage}}
 
 \begin{document}
-\begin{titlepage}
-	\centering
-	{\scshape\LARGE Document Title \par}
-	\vspace{1cm}
-	{\large Todays Date\par}
-	\vspace{1.5cm}
-	{\Large\itshape Kevin Muncie\par}
-	\vfill
 
+\begin{titlepage}
+   \centering
+   {\LARGE \meetingTitle\\}\vspace{0.5cm}
+   \centerline{\rule{0.6667\linewidth}{.5pt}}\vspace{0.5cm}
+   {\large\textbf{Attendance List}\\}
+      A Name, B Name, C Name, D Name, E Name
+      \\
+   \vspace{0.5cm}
+   {\large\textbf{Single Person Event}\\}
+      A Name\\
+   \vspace{0.5cm}
+   {\large\textbf{Single Person Event}\\}
+      A Name\\
+   \vspace{0.5cm}
+   {\large\textbf{Notes Taken By}\\}
+      A Name\\
+
+   \vfill
+   \displaydate{meetingDate}
 \end{titlepage}
 
-Content will go here
+\tableofcontents
+\newpage
+
+\section{Example Section Heading\footnote{Example Footnote}}
+
+   An example sentence which would be fairly short in this opening example.\\
+
+   This sentence would be much longer in theory.\\
+
+   \textbf{Follow through:} Someone assigned to do something\\
+
+\section{Example Section Heading}
+
+   \subsection{Example Subsection Heading}
+
+      \begin{itemize}
+         \item This is an item
+         \item This is also an item
+      \end{itemize}
 
 \end{document}
